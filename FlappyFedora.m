@@ -27,8 +27,9 @@ NSString *appLocation;
 		assetFiles = [fileManager contentsOfDirectoryAtPath:ASSETS_DIR error:nil];
 		
 		appLocation = [findAppContainer(APP_NAME, APP_ID) stringByAppendingPathComponent:APP_NAME @".app"];
-		
-		[self backup];
+		if(appLocation) {
+			[self backup];
+		}
 	}
 	
 	return self;
@@ -36,7 +37,8 @@ NSString *appLocation;
 
 - (id)specifiers {
 	if(_specifiers == nil) {
-		_specifiers = [self loadSpecifiersFromPlistName:@"FlappyFedora" target:self];
+		NSString *plistName = appLocation? @"FlappyFedora": @"FlappyFedoraFail";
+		_specifiers = [self loadSpecifiersFromPlistName:plistName target:self];
 	}
 	return _specifiers;
 }
@@ -84,5 +86,3 @@ NSString *appLocation;
 }
 
 @end
-
-// vim:ft=objc

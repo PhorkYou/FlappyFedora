@@ -1,7 +1,7 @@
 Package: com.tyilo.flappyfedora
 Name: FlappyFedora
 Depends: preferenceloader
-Version: 1.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Description: Toggle between Flappy Bird and the Flappy Fedora version in Settings
 Maintainer: Asger Drewsen (Tyilo) <asgerdrewsen@gmail.com>
