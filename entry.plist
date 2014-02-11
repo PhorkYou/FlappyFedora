@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = FlappyFedora;
+	cell = PSLinkCell;
+	detail = FlappyFedoraListController;
+	icon = FlappyFedora.png;
+	isController = 1;
+	label = FlappyFedora;
+    };
+}
